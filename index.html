@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="section1">
+        <div class="title-logo">
+            <img src="./img/logo.svg" class="img-fluid">
+            <div class="countdown">
+                <p id="countdown">2:00</p>
+            </div>
+            <div class="score-counter">
+                <h5>SCORE</h5>
+                <h2 id="scores">0</h2>
+            </div>
+        </div>
+        <div class="the-selected hide">
+            <div class="left-player">
+                <p>YOU PICKED</p>
+                <div class="the-picked">
+                    <img src="./img/Paper.png" id="playerPicked" class="img-fluid">
+                </div>
+            </div>
+            <div class="declaration">
+                <h2 id="ref">YOU  WIN</h2>
+                <button class="btn-playAgain">
+                    PLAY AGAIN
+                </button>
+            </div>
+            <div class="right-player">
+                <p>THE HOUSE PICKED</p>
+                <div class="the-house">
+                    <img src="./img/Paper.png" id="compPicked" class="img-fluid">
+                </div>
+            </div>
+        </div>
+       <div class="body-rpx">
+        <img src="./img/bg-triangle.svg"  class="img-fluid " width="40%" id="triangle">
+        <img src="./img/Paper.png" alt="" value="paper picks" class="img-fluid picks" id="Paper" width="30%">
+        <img src="./img/Rock.png" alt="" class="img-fluid picks" id="Rock" width="30%">
+        <img src="./img/Scissors.png" alt="" class="img-fluid picks" id="Scissors" width="30%" >
+       </div>
+
+       <div class="rule-book">
+            <!-- Button trigger modal -->
+            <button type="button" id="rule" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                RULES
+            </button>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5 fw-bold m-color" id="exampleModalLabel">RULE</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <img src="./img/image-rules.svg" class="img-fluid" width="70%">
+                </div>
+            </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <div class="section-overlay">
+        <div class="instruction-image">
+        <img src="./img/image-rules.svg" class="img-fluid">
+    </div>
+        <div class=" fw-bold">
+            <p>Play ROCK PAPER SCISSORS against the computer within 2mins and win some dollars</p>
+            <ul>
+                <li>5 points => $100</li>
+                <li>10 points => $200</li>
+                <li>15 points => $500</li>
+            </ul>
+           
+        </div>
+        <div id="start-game">
+        <button class="start">Start</button>
+    </div>
+    </div>
+
+    <div class="the-winning hide">
+       <div class="win-content">
+        <h1>YOU WON</h1>
+        <div class="amount">
+            $100
+        </div>
+        <div class="reload">
+            <button onClick="history.go(0)"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="white" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+              </svg></button>
+        </div>
+       </div>
+    </div>
+</div>
+    
+    
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
